@@ -1,0 +1,16 @@
+﻿@page "/lifecycle"
+<h3>Lifecycle Test</h3>
+
+@code {
+    protected override void OnInitialized()
+    {
+        Console.WriteLine("OnInitialized");
+    }
+
+    protected override async Task OnInitializedAsync()
+    {
+        Console.WriteLine("OnInitializedAsync");
+        await Task.Delay(100);
+    }
+
+}
